@@ -12,6 +12,9 @@ public class Task03 {
         isSameValues(array2);
     }
 
+    /**
+     * Метод проверяет, все ли значения в массиве одинаковые и выводит результат в консоль
+     */
     public static void isSameValues(int[] array) {
         boolean flag = true;
         for (int i = 0; i < array.length - 1; i++) {

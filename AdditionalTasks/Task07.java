@@ -1,19 +1,21 @@
+package AdditionalTasks;
+
 import java.util.Random;
+import java.util.Scanner;
 
 /**
- * 5. Заполнить массив на 10 элементов случайными числами
- * от -10 до +10. Посчитать количество повторяющихся значений. Вывести на консоль только повторяющиеся элементы
- * и количество повторений.
- * Пример:
- * 0 – 5 раз
- * 2 – 3 раза
- * 7 – 1 раз
+ * 7. Заполнить массив размерности n случайными цифрами
+ * от 3 до 13. Подсчитать, сколько раз встречается каждая цифра.
+ * Вывести результат на экран. n – задается с клавиатуры.
  */
-public class Task05 {
+public class Task07 {
     public static void main(String[] args) {
-        int[] array = new int[10];
-        int minValue = -10;
-        int maxValue = 10;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите значение n: ");
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        int minValue = 3;
+        int maxValue = 13;
 
         fillRandomArray(array, minValue, maxValue);
         for (int i = minValue; i <= maxValue; i++) {
@@ -21,7 +23,7 @@ public class Task05 {
             for (int value : array) {
                 if (value == i) count++;
             }
-            if (count > 1) System.out.println(i + " (" + count + " шт.)");
+            if (count > 0) System.out.println(i + " (" + count + " шт.)");
         }
     }
 

@@ -15,8 +15,8 @@ public class Task09 {
         System.out.print("Введите значение n: ");
         int n = sc.nextInt();
         int[] arrray = new int[n];
-
         boolean hasNegative = false;
+
         for (int i = 0; i < arrray.length; i++) {
             arrray[i] = rm.nextInt(-2, n + 1);
             if (arrray[i] < -1) {
